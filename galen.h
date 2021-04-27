@@ -20,4 +20,6 @@ struct Escola {
 
 map<int, vector<int>> galen_shapley_estavel(vector<Professor> p, vector<Escola> e);
 
+map<int, vector<int>> galen_shapley_maximo_estavel(vector<Professor> p, vector<Escola> e);
+
 #endif
