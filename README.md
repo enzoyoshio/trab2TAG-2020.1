@@ -5,7 +5,6 @@ Para este projeto, foi utilizado um concurso de professores e o algoritmo deveri
 Para rodar o programa basta usar no terminal:
 
 **COLOCAR AQUI A LINHA DE COMANDO PARA COMPILAÇÃO**
-
-**COLOCAR AQUI A LINHA DE COMANDO PARA EXECULÇÃO**
+**g++ -std=c++17 main.cpp galen.cpp -o main && ./main**
 
 Os dados de entrada podem ser encontrados em "input.txt" e os dados de saída ficam em "output.txt"
