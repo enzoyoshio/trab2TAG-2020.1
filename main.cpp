@@ -7,9 +7,9 @@
  *
  */
 
-
-// bits or include each bib one by one ?
-#include<bits/stdc++.h>
+#include<vector>
+#include<map>
+#include<iostream>
 #include"galen.h"
 
 // using namespace or wirte std everytime ?
@@ -70,21 +70,21 @@ int main() {
 	cout << "Um conjunto estável para esse problema eh:\n";
 	for(auto [esc, profs]: resposta) {
 		cout << "ESCOLA " << esc << " quer professores com ";
-		for(auto pre:escolas[esc-1].preferencias) cout << pre << ' ';
+		for(auto pre:escolas[esc-1].preferencias) cout << "QUERIA " << pre << ' ';
 		cout <<  "\n";
 		for(auto p: profs) cout << "Professor " << p << " possui habilitacao -> " << professores[p-1].hab << '\n';
 		cout << "\n\n";
 	}
 
-	map<int,vector<int>> resposta = galen_shapley_maximo_estavel(professores, escolas);
+	// map<int,vector<int>> resposta = galen_shapley_maximo_estavel(professores, escolas);
 
-	cout << "Um conjunto maximo estavel para esse problema eh: \n";
-	for(auto [esc, profs]: resposta) {
-		cout << "ESCOLA " << esc << " quer professores com ";
-		for(auto pre:escolas[esc-1].preferencias) cout << pre << ' ';
-		cout <<  "\n";
-		for(auto p: profs) cout << "Professor " << p << " possui habilitacao -> " << professores[p-1].hab << '\n';
-		cout << "\n\n";
-	}
+	// cout << "Um conjunto maximo estavel para esse problema eh: \n";
+	// for(auto [esc, profs]: resposta) {
+	// 	cout << "ESCOLA " << esc << " quer professores com ";
+	// 	for(auto pre:escolas[esc-1].preferencias) cout << pre << ' ';
+	// 	cout <<  "\n";
+	// 	for(auto p: profs) cout << "Professor " << p << " possui habilitacao -> " << professores[p-1].hab << '\n';
+	// 	cout << "\n\n";
+	// }
 	return 0;
 }
