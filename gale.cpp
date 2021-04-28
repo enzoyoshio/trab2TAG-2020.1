@@ -1,4 +1,4 @@
-#include"galen.h"
+#include"gale.h"
 #include<algorithm>
 #include<vector>
 #include<map>
@@ -12,21 +12,12 @@ Professor::Professor(int idx, int h, vector<int> p) : hab(h), id(idx), preferenc
 
 Escola::Escola(int idx, int c, vector<int> p) : cap(c), id(idx), preferencias(p), id_pares(p.size(), -1) {}
 
-int temProf(vector<Professor>& p) {
-    for(int i = 0; i < p.size(); i++) {
-        if(p[i].id_par == -1) return i+1;
-    }
-    return 0;
-}
-
-bool temPref(int idx, vector<Professor>& p) {
-    return p[idx-1].preferencias.size();
-}
-
-bool escola_quer_prof(Escola& e, Professor p) {
+bool escola_quer_prof(Escola& e, Professor& p) {
     for(auto& h: e.preferencias) {
         if(h <= p.hab && h > 0) {
-            h = -h;
+            // h = -h;
+            p.id_par = h;
+            h = 0;
             return true;
         } 
     }
@@ -34,10 +25,11 @@ bool escola_quer_prof(Escola& e, Professor p) {
 }
 
 int escolhe_pior(vector<int> a, vector<Professor> p) {
-    int mini = 0, par = 0;
+    int mini = 10, par = 0;
+    
     for(int i = 0; i < a.size(); i++) {
         Professor prof = p[a[i]-1];
-        if(prof.hab >= mini){
+        if(prof.hab <= mini){
             mini = prof.hab;
             par = prof.id;
         }
@@ -46,49 +38,51 @@ int escolhe_pior(vector<int> a, vector<Professor> p) {
 }
 
 void arruma(Escola& e, Professor p) {
-    for(auto& a: e.preferencias) {
-        if(abs(a) <= p.id) {
-            a = abs(a);
+    for(auto& it: e.preferencias) {
+        if(it == 0) {
+            it = p.id_par;
             return;
         }
     }
 }
 
-int procura_outra(int hab, vector<Escola> e, map<int,vector<int>> M) {
+int procura_outra(int hab, vector<Escola> e) {
     for(int i = 0; i < e.size(); i++) {
-        if(M[e[i].id].size() < e[i].cap && (e[i].preferencias[0] <= hab || (e[i].preferencias.size() == 2 &&e[i].preferencias[1] <= hab))) return i;
+        if(((e[i].preferencias[0] == hab && e[i].preferencias[0] > 0) || (e[i].preferencias.size() == 2 &&e[i].preferencias[1] == hab && e[i].preferencias[1] > 0))) return i;
     }
     return -1;
 }
 
-map<int, vector<int>> galen_shapley_estavel(vector<Professor>& p, vector<Escola>& e) {
+map<int, vector<int>> gale_shapley(vector<Professor>& p, vector<Escola>& e) {
     map<int, vector<int>> M;
-    int idx_professor = 0, contador = 0;
+    int idx_professor = 0, contador = -1;
     
     // laço "infinito" para o algoritmo rodar o suficiente para encontrar a melhor resposta
     // ele para quando todos professores forem alocados ou as vagas das escolas acabarem (?)
-    while(idx_professor < 1000) { 
+    while(contador++ < 1000000) { 
+
         // escolhe o professor para aplicar       
         // & faz salvar o valor no vetor tambem
-        Professor& p1 = p[(idx_professor++)%50];
-        if(p1.id_par != -1) continue;
-        cout << "TESTE\n";
-        cout << temProf(p)-1 << '\n';
-        cout << "FIM TESTE\n";
+        Professor& p1 = p[(contador)%100];
+        if(p1.hab != 1 and contador < 10000) continue;
+        if(p1.hab == 3 and contador < 20000) continue;
+        if(p1.id_par != 0) continue;
+        
         // encontra a escola que o professor quer
         int idx_escola;
-        if(p1.preferencias.empty()) {
-            idx_escola = procura_outra(p1.hab, e, M);
-        }else {
-            idx_escola = (*p1.preferencias.begin())-1;
-        }
+
+        // if(p1.preferencias.empty()) {
+        //     idx_escola = procura_outra(p1.hab, e);
+        // }else {
+        // }
+        idx_escola = (*p1.preferencias.begin())-1;
+        
         if(idx_escola == -1) {
-            p1.id = 19;
-            //if(p1.preferencias.size()) p1.preferencias.erase(p1.preferencias.begin());
+            if(p1.preferencias.size()) p1.preferencias.erase(p1.preferencias.begin());
             continue;
         } 
         Escola& e1 = e[idx_escola];
-
+        
         // verifica se o professor tem habilitação para a escola desejada
         if(!escola_quer_prof(e1, p1)) {
             if(p1.preferencias.size()) p1.preferencias.erase(p1.preferencias.begin());
@@ -100,15 +94,16 @@ map<int, vector<int>> galen_shapley_estavel(vector<Professor>& p, vector<Escola>
         // cout << "FIM TESTE >>>>>>>>>>>>>>>>>>.\n";
  
         // professor aplicando para a escola
+        
         M[e1.id].push_back(p1.id);
-        p1.id_par = e1.id;
+        // p1.id_par = e1.id;
         if(p1.preferencias.size()) p1.preferencias.erase(p1.preferencias.begin());
         e1.id_pares.push_back(p1.id);
     
         // se tiverem mais professores do que a escola pode receber, temos que retirar algum
         if(e1.cap < M[e1.id].size()) {
             int apaga = escolhe_pior(M[e1.id], p);
-            p[apaga-1].id_par = -1;
+            // p[apaga-1].id_par = 0;
             M[e1.id].erase(find(M[e1.id].begin(), M[e1.id].end(), apaga));
             e1.id_pares.erase(find(e1.id_pares.begin(), e1.id_pares.end(), apaga));
             arruma(e1, p[apaga-1]);
@@ -116,26 +111,4 @@ map<int, vector<int>> galen_shapley_estavel(vector<Professor>& p, vector<Escola>
     }
 
     return M;
-}
-
-int tem_escola(vector<Escola> e, map<int, vector<int>>& M) {
-    for(int i = 0; i < e.size(); i++) {
-        if(M[e[i].id].size() <= e[i].cap) return i+1;
-    }
-    return 0;
-}
-
-map<int, vector<int>> gale_shapley_escola(vector<Professor>& p, vector<Escola>& e) {
-    map<int, vector<int>> M;
-
-    int idx = -1;
-    while((idx = tem_escola(e, M))) {
-        Escola& e1 = e[idx-1];
-        // int prof_idx = procura_professor(e1.id, p);
-    }
-    return M;
-}
-
-map<int, vector<int>> galen_shapley_maximo_estavel(vector<Professor> p, vector<Escola> e) {
-    return {{1, {1, 2}}};
 }

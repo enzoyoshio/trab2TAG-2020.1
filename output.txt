@@ -1,52 +1,236 @@
 Um conjunto estável para esse problema eh:
-ESCOLA 4 quer professores com 2 
-Professor 4 possui habilitacao -> 2
+ESCOLA 1 quer professores com QUERIA 0 
+Professor 72 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
 
 
-ESCOLA 5 quer professores com 2 
-Professor 6 possui habilitacao -> 2
+ESCOLA 2 quer professores com QUERIA 0 
+Professor 99 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
 
 
-ESCOLA 7 quer professores com 3 
-Professor 10 possui habilitacao -> 3
+ESCOLA 3 quer professores com QUERIA 0 
+Professor 1 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
 
 
-ESCOLA 10 quer professores com 1 2 
-Professor 1 possui habilitacao -> 3
-Professor 2 possui habilitacao -> 2
+ESCOLA 4 quer professores com QUERIA 0 
+Professor 97 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
 
 
-ESCOLA 20 quer professores com 3 2 
-Professor 3 possui habilitacao -> 2
-Professor 5 possui habilitacao -> 3
+ESCOLA 5 quer professores com QUERIA 0 
+Professor 96 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
 
 
-ESCOLA 25 quer professores com 3 2 
-Professor 11 possui habilitacao -> 2
+ESCOLA 6 quer professores com QUERIA 0 
+Professor 47 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
 
 
-ESCOLA 27 quer professores com 2 2 
-Professor 12 possui habilitacao -> 2
+ESCOLA 7 quer professores com QUERIA 0 
+Professor 10 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
 
 
-ESCOLA 30 quer professores com 2 
-Professor 13 possui habilitacao -> 2
+ESCOLA 8 quer professores com QUERIA 0 
+Professor 60 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
 
 
-ESCOLA 33 quer professores com 2 2 
-Professor 15 possui habilitacao -> 3
+ESCOLA 9 quer professores com QUERIA 0 
+Professor 92 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
 
 
-ESCOLA 35 quer professores com 2 1 
-Professor 8 possui habilitacao -> 2
-Professor 9 possui habilitacao -> 2
+ESCOLA 10 quer professores com QUERIA 0 QUERIA 0 
+Professor 21 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+Professor 2 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
 
 
-ESCOLA 37 quer professores com 2 1 
-Professor 7 possui habilitacao -> 2
+ESCOLA 11 quer professores com QUERIA 0 QUERIA 0 
+Professor 90 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+Professor 40 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
 
 
-ESCOLA 48 quer professores com 1 
-Professor 14 possui habilitacao -> 2
+ESCOLA 12 quer professores com QUERIA 0 QUERIA 0 
+Professor 70 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+Professor 5 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
 
 
+ESCOLA 13 quer professores com QUERIA 0 QUERIA 0 
+Professor 65 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+Professor 75 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 14 quer professores com QUERIA 0 QUERIA 0 
+Professor 87 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 25 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 15 quer professores com QUERIA 0 QUERIA 0 
+Professor 61 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+Professor 35 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 16 quer professores com QUERIA 0 
+Professor 85 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 17 quer professores com QUERIA 0 
+Professor 45 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 18 quer professores com QUERIA 0 
+Professor 50 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 19 quer professores com QUERIA 0 QUERIA 0 
+Professor 82 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 100 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 20 quer professores com QUERIA 0 QUERIA 0 
+Professor 11 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 15 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 21 quer professores com QUERIA 0 QUERIA 0 
+Professor 9 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 80 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 22 quer professores com QUERIA 3 QUERIA 0 
+Professor 31 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+
+
+ESCOLA 23 quer professores com QUERIA 3 QUERIA 0 
+Professor 78 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 24 quer professores com QUERIA 3 QUERIA 0 
+Professor 51 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+
+
+ESCOLA 25 quer professores com QUERIA 3 QUERIA 0 
+Professor 76 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 26 quer professores com QUERIA 0 QUERIA 0 
+Professor 81 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+Professor 77 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 27 quer professores com QUERIA 0 QUERIA 0 
+Professor 74 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 79 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 28 quer professores com QUERIA 0 QUERIA 0 
+Professor 91 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+Professor 28 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 29 quer professores com QUERIA 0 QUERIA 0 
+Professor 13 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 56 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 30 quer professores com QUERIA 0 
+Professor 22 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 31 quer professores com QUERIA 0 
+Professor 14 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 32 quer professores com QUERIA 0 QUERIA 0 
+Professor 69 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 84 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 33 quer professores com QUERIA 0 QUERIA 0 
+Professor 68 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 86 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 34 quer professores com QUERIA 0 QUERIA 0 
+Professor 67 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 93 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 35 quer professores com QUERIA 0 QUERIA 0 
+Professor 71 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+Professor 18 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 36 quer professores com QUERIA 0 QUERIA 0 
+Professor 36 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 98 possui habilitacao -> 2 ocupou a vaga para habilitaçao 1
+
+
+ESCOLA 37 quer professores com QUERIA 0 QUERIA 0 
+Professor 64 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 37 possui habilitacao -> 2 ocupou a vaga para habilitaçao 1
+
+
+ESCOLA 38 quer professores com QUERIA 0 QUERIA 0 
+Professor 63 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 38 possui habilitacao -> 2 ocupou a vaga para habilitaçao 1
+
+
+ESCOLA 39 quer professores com QUERIA 0 QUERIA 0 
+Professor 39 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 62 possui habilitacao -> 2 ocupou a vaga para habilitaçao 1
+
+
+ESCOLA 40 quer professores com QUERIA 0 QUERIA 0 
+Professor 41 possui habilitacao -> 1 ocupou a vaga para habilitaçao 1
+Professor 33 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 41 quer professores com QUERIA 0 QUERIA 0 
+Professor 19 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 3 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 42 quer professores com QUERIA 0 QUERIA 3 
+Professor 59 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 43 quer professores com QUERIA 0 QUERIA 0 
+Professor 58 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 20 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 44 quer professores com QUERIA 0 QUERIA 3 
+Professor 57 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+ESCOLA 45 quer professores com QUERIA 0 QUERIA 0 
+Professor 29 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 30 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 46 quer professores com QUERIA 0 QUERIA 0 
+Professor 46 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 55 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 47 quer professores com QUERIA 0 QUERIA 0 
+Professor 54 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 95 possui habilitacao -> 3 ocupou a vaga para habilitaçao 3
+
+
+ESCOLA 48 quer professores com QUERIA 0 
+Professor 53 possui habilitacao -> 2 ocupou a vaga para habilitaçao 1
+
+
+ESCOLA 50 quer professores com QUERIA 0 QUERIA 0 
+Professor 32 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+Professor 34 possui habilitacao -> 2 ocupou a vaga para habilitaçao 2
+
+
+O total de professores alocados foi 77
+O total de escolas alocadas foi 49
+
+As escolas estavam ofertando 13 vagas para habilitacao 1
+As escolas estavam ofertando 43 vagas para habilitacao 2
+As escolas estavam ofertando 28 vagas para habilitacao 3
+O total de vagas era 84
+
+No total haviam 8 professores com habilitacao 1 e 8 foram alocados
+No total haviam 71 professores com habilitacao 2 e 48 foram alocados
+No total haviam 21 professores com habilitacao 3 e 21 foram alocados
